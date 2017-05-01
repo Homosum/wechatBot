@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "ImageViewController.h"
+
 @interface HomeViewController ()<NSURLConnectionDataDelegate>
 @property(nonatomic,strong)NSString*key;
 @property(nonatomic,strong)NSMutableData*receiveData;
@@ -24,20 +25,34 @@
 //    self.keyTextField.hidden=!self.keyTextField.hidden;
     
 //    ImageViewController*imageVC=[[ImageViewController alloc]init];
+    [self.keyTextField resignFirstResponder];
     NSMutableDictionary*dict=[NSMutableDictionary dictionary];
     NSString*robKey=self.keyTextField.stringValue;
     [dict setObject:robKey forKey:@"key"];
     [dict setObject:@"你妈妈是谁" forKey:@"info"];
     [dict setObject:@"98765" forKey:@"userid"];
     //    [self presentViewControllerAsModalWindow:imageVC];
-    NSURL*url=[NSURL URLWithString:URL_BOT];
-    NSString*dicStr=[NSString stringWithFormat:@"key=%@&info=你妈妈是谁&userid=973484783",robKey];
-    NSData*content=[dicStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSMutableURLRequest*request=[[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:content];
-    NSURLConnection*connection =[[NSURLConnection alloc]initWithRequest:request delegate:self];
-    [connection start];
+    [[NetworkManger sharedInstance] getLoginImgWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //
+        NSLog(@"%@",responseObject);
+        self.keyTextField.stringValue=[responseObject objectForKey:@"text"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //
+        NSLog(@"%@",error.userInfo);
+    } andKey:robKey];
+    
+    
+    
+    
+    //原始请求
+//    NSURL*url=[NSURL URLWithString:URL_BOT];
+//    NSString*dicStr=[NSString stringWithFormat:@"key=%@&info=你妈妈是谁&userid=973484783",robKey];
+//    NSData*content=[dicStr dataUsingEncoding:NSUTF8StringEncoding];
+//    NSMutableURLRequest*request=[[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+//    [request setHTTPMethod:@"POST"];
+//    [request setHTTPBody:content];
+//    NSURLConnection*connection =[[NSURLConnection alloc]initWithRequest:request delegate:self];
+//    [connection start];
     
 }
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
