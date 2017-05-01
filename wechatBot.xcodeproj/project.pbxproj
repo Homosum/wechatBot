@@ -13,6 +13,10 @@
 		FBF4787C1E66ADAE006F48F1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF4787A1E66ADAE006F48F1 /* MainMenu.xib */; };
 		FBF478871E66ADAE006F48F1 /* wechatBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF478861E66ADAE006F48F1 /* wechatBotTests.m */; };
 		FBF478921E66ADAE006F48F1 /* wechatBotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF478911E66ADAE006F48F1 /* wechatBotUITests.m */; };
+		FBF478A21E66AE4C006F48F1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF478A01E66AE4C006F48F1 /* HomeViewController.m */; };
+		FBF478A31E66AE4C006F48F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF478A11E66AE4C006F48F1 /* HomeViewController.xib */; };
+		FBF478A81E66B707006F48F1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF478A61E66B707006F48F1 /* ImageViewController.m */; };
+		FBF478A91E66B707006F48F1 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF478A71E66B707006F48F1 /* ImageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FBF479591E66CB5D006F48F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FBF4786F1E66ADAE006F48F1 /* wechatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wechatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF478721E66ADAE006F48F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +63,14 @@
 		FBF4788D1E66ADAE006F48F1 /* wechatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wechatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF478911E66ADAE006F48F1 /* wechatBotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wechatBotUITests.m; sourceTree = "<group>"; };
 		FBF478931E66ADAE006F48F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBF4789F1E66AE4C006F48F1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		FBF478A01E66AE4C006F48F1 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		FBF478A11E66AE4C006F48F1 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FBF478A51E66B707006F48F1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		FBF478A61E66B707006F48F1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		FBF478A71E66B707006F48F1 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		FBF478E71E66C4CE006F48F1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FBF478E81E66C56B006F48F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +101,7 @@
 		FBF478661E66ADAE006F48F1 = {
 			isa = PBXGroup;
 			children = (
+				FBF478A41E66B402006F48F1 /* Model */,
 				FBF478711E66ADAE006F48F1 /* wechatBot */,
 				FBF478851E66ADAE006F48F1 /* wechatBotTests */,
 				FBF478901E66ADAE006F48F1 /* wechatBotUITests */,
@@ -98,6 +124,14 @@
 			children = (
 				FBF478721E66ADAE006F48F1 /* AppDelegate.h */,
 				FBF478731E66ADAE006F48F1 /* AppDelegate.m */,
+				FBF4789F1E66AE4C006F48F1 /* HomeViewController.h */,
+				FBF478A01E66AE4C006F48F1 /* HomeViewController.m */,
+				FBF478E81E66C56B006F48F1 /* PrefixHeader.pch */,
+				FBF478E71E66C4CE006F48F1 /* Constants.h */,
+				FBF478A11E66AE4C006F48F1 /* HomeViewController.xib */,
+				FBF478A51E66B707006F48F1 /* ImageViewController.h */,
+				FBF478A61E66B707006F48F1 /* ImageViewController.m */,
+				FBF478A71E66B707006F48F1 /* ImageViewController.xib */,
 				FBF478781E66ADAE006F48F1 /* Assets.xcassets */,
 				FBF4787A1E66ADAE006F48F1 /* MainMenu.xib */,
 				FBF4787D1E66ADAE006F48F1 /* Info.plist */,
@@ -132,6 +166,13 @@
 			path = wechatBotUITests;
 			sourceTree = "<group>";
 		};
+		FBF478A41E66B402006F48F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,8 +181,9 @@
 			buildConfigurationList = FBF478961E66ADAE006F48F1 /* Build configuration list for PBXNativeTarget "wechatBot" */;
 			buildPhases = (
 				FBF4786B1E66ADAE006F48F1 /* Sources */,
-				FBF4786C1E66ADAE006F48F1 /* Frameworks */,
 				FBF4786D1E66ADAE006F48F1 /* Resources */,
+				FBF4786C1E66ADAE006F48F1 /* Frameworks */,
+				FBF479591E66CB5D006F48F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +285,8 @@
 			files = (
 				FBF478791E66ADAE006F48F1 /* Assets.xcassets in Resources */,
 				FBF4787C1E66ADAE006F48F1 /* MainMenu.xib in Resources */,
+				FBF478A91E66B707006F48F1 /* ImageViewController.xib in Resources */,
+				FBF478A31E66AE4C006F48F1 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +313,8 @@
 			files = (
 				FBF478771E66ADAE006F48F1 /* main.m in Sources */,
 				FBF478741E66ADAE006F48F1 /* AppDelegate.m in Sources */,
+				FBF478A81E66B707006F48F1 /* ImageViewController.m in Sources */,
+				FBF478A21E66AE4C006F48F1 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,8 +454,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7B6K7AU89Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/wechatBot/PrefixHeader.pch";
 				INFOPLIST_FILE = wechatBot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = us.homosum.wechatBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -421,8 +475,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7B6K7AU89Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/wechatBot/PrefixHeader.pch";
 				INFOPLIST_FILE = wechatBot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = us.homosum.wechatBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -501,6 +563,7 @@
 				FBF478981E66ADAE006F48F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBF478991E66ADAE006F48F1 /* Build configuration list for PBXNativeTarget "wechatBotTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +572,7 @@
 				FBF4789B1E66ADAE006F48F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBF4789C1E66ADAE006F48F1 /* Build configuration list for PBXNativeTarget "wechatBotUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +581,7 @@
 				FBF4789E1E66ADAE006F48F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

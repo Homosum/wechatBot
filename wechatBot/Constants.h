@@ -8,6 +8,6 @@
 
 #ifndef Constants_h
 #define Constants_h
-
+#define URL_BOT @"http://www.tuling123.com/openapi/api"
 
 #endif /* Constants_h */

@@ -7,16 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property(nonatomic,strong)IBOutlet HomeViewController*homeVC;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    self.homeVC=[[HomeViewController alloc]init];
+//    [self.window.contentView addSubview:self.homeVC.view];
+//    self.homeVC.view.frame=self.window.contentView.bounds;
+    self.window.contentViewController=self.homeVC;
+    
+    
 }
 
 

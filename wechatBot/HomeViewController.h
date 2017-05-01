@@ -9,5 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface HomeViewController : NSViewController
+@property (weak) IBOutlet NSTextField *keyTextField;
+@property (weak) IBOutlet NSButton *confirmButton;
 
 @end

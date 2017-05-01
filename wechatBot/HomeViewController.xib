@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="confirmButton" destination="hWk-9r-woZ" id="Z3c-Zw-brX"/>
+                <outlet property="keyTextField" destination="45r-Kk-ORJ" id="fV2-3l-ixX"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -14,6 +18,58 @@
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vko-96-QxA">
+                    <rect key="frame" x="78" y="123" width="64" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="FT0-c2-QFm"/>
+                        <constraint firstAttribute="height" constant="25" id="jGv-yF-ZpH"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="key:" id="PLM-VH-ZZh">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45r-Kk-ORJ">
+                    <rect key="frame" x="140" y="124" width="260" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="PE1-zX-LPy"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="l5N-me-VTg">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-9r-woZ">
+                    <rect key="frame" x="199" y="37" width="82" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="3eL-mG-Xf5"/>
+                        <constraint firstAttribute="height" constant="20" id="kbO-Rk-Mm6"/>
+                    </constraints>
+                    <gestureRecognizers>
+                        <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="erJ-lG-KSz">
+                            <connections>
+                                <action selector="confirmKey:" target="-2" id="zii-bW-Skc"/>
+                            </connections>
+                        </clickGestureRecognizer>
+                    </gestureRecognizers>
+                    <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sMT-ai-I3A">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vko-96-QxA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="80" id="8vk-aW-SpV"/>
+                <constraint firstAttribute="trailing" secondItem="45r-Kk-ORJ" secondAttribute="trailing" constant="80" id="Pmd-YN-l0z"/>
+                <constraint firstItem="45r-Kk-ORJ" firstAttribute="leading" secondItem="vko-96-QxA" secondAttribute="trailing" id="Xx8-m7-y5x"/>
+                <constraint firstItem="45r-Kk-ORJ" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Z5b-r7-nRY"/>
+                <constraint firstItem="vko-96-QxA" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="w9M-eq-4sQ"/>
+                <constraint firstItem="hWk-9r-woZ" firstAttribute="top" secondItem="45r-Kk-ORJ" secondAttribute="bottom" constant="60" id="xUH-MC-Z61"/>
+                <constraint firstItem="hWk-9r-woZ" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="zgd-lf-DnY"/>
+            </constraints>
         </customView>
     </objects>
 </document>
